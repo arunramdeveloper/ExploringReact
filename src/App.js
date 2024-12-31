@@ -1,20 +1,20 @@
 
 
 import './App.css';
+import PassingPropsAsArrayDemo1 from './components/PassingPropsAsArrayDemo1';
 
-import PropsAsFunctionDemo2 from './components/PropsAsFunctionDemo2';
+
 
 
 function App() {
  
-  function getData(){
-    alert("Hello from app component");
-  }
+  const fruits = ["Apple", "Banana", "Cherry", "Date"];
   
   return (
     <div className="App">
-     {/*  props passing function  */}
-     <PropsAsFunctionDemo2 data={getData} />
+     {/*  Passing props as array to child component  */}
+    
+       <PassingPropsAsArrayDemo1 fruitArray={fruits} />
     
     </div>
   );
