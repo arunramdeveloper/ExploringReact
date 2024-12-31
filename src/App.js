@@ -1,20 +1,26 @@
 
 
 import './App.css';
-import PassingPropsAsArrayDemo1 from './components/PassingPropsAsArrayDemo1';
+import PropsPassingAsObjectDemo1 from './components/PropsPassingAsObjectDemo1';
+
 
 
 
 
 function App() {
  
-  const fruits = ["Apple", "Banana", "Cherry", "Date"];
+  const users = [
+    { Id: 1, name: "John Doe", city: "New York" },
+    { Id: 2, name: "Jane Smith", city: "London" },
+    { Id: 3, name: "Raj Kumar", city: "Chennai" },
+  ];
   
   return (
     <div className="App">
-     {/*  Passing props as array to child component  */}
-    
-       <PassingPropsAsArrayDemo1 fruitArray={fruits} />
+     {/*  Passing props as Object to child component  */}
+     <h1>{'passing user object as props '}</h1>
+    <PropsPassingAsObjectDemo1 userArray={users}  />
+      
     
     </div>
   );
