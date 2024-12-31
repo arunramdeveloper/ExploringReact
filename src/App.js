@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       
 
-      <H1>Exploring React hook</H1>
+      <H1>Exploring React hooks demo </H1>
     </div>
   );
 }
