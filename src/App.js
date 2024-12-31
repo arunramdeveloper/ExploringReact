@@ -1,20 +1,26 @@
 
 import { useState } from 'react';
 import './App.css';
-import PassingProps from './components/PassingProps';
+import Button from './components/Button';
+
 
 
 function App() {
+  const [count, setCount] = useState(0);
 
+  function handleClick(){
+    setCount(count+1);
+  }
   
   return (
     <div className="App">
-     {/*  passing  props as children  */}
-       <PassingProps   >
-           <h2>children content 1</h2>
-           <p>children content 2 </p>
-            <button>children content 3</button>
-       </PassingProps>
+     {/*  props passing function  */}
+     <h1>{count}</h1>
+     <Button handleClick={handleClick} text="click to PasspropsAsFunction">
+     <h2>{count}</h2>
+     </Button>
+     <h3>{count}</h3>
+     
     </div>
   );
 }
